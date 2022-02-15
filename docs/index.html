@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1,
+  maximum-scale=5"
+    />
+
+    <link rel="icon" href="devchallenges.png" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="https://devchallenges.io/"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>My gallery master</title>
+
+    <style>
+      *, *::before, *::after {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      :root {
+        --border-radius: 10px;
+        --box-bg: #E5E5E5;
+      }
+
+      body, html {
+        width: 100%;
+        height: 100%;
+        display: grid;
+        place-items: center;
+        padding: 0 .5rem;
+      }
+
+      .container {
+        width: 100%;
+        height: 100%;
+        min-width: 350px;
+        max-width: 750px;
+        display: grid;
+        place-items: center;
+        gap: 3rem;
+        padding: 3rem 0;
+      }
+
+      main {
+        width: 100%;
+        height: 100%;
+        min-width: 350px;
+        display: grid;
+        grid-template-columns: repeat(3, minmax(100px, 1fr));
+        grid-template-rows: repeat(3, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .item {
+        border-radius: var(--border-radius);
+      }
+
+      footer {
+        width: 100%;
+        height: 80px;
+        display: grid;
+        place-items: center;
+      }
+
+
+      .item-1 {
+        background-image: url("./photo1.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+       
+        /* background-color: red; */
+      }
+      .item-2 {
+        grid-column: 2 / 4;
+        background-size: cover;
+        background-image: url("./photo2.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-color: blue; */
+      }
+      .item-3 {
+        grid-column: 1 / 3;
+        background-size: cover;
+        background-image: url("./photo3.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-color: green; */
+      }
+      .item-4 {
+        grid-column: 3 / 4;
+        background-size: cover;
+        background-image: url("./photo_4.png");
+        background-repeat: no-repeat;
+        background-position: center;
+        grid-row: 2 / 4;
+        /* background-color: black; */
+      }
+      .item-5 {
+        background-image: url("./photo5.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-color: gray; */
+      }
+
+      .item-6 {
+        background-image: url("./photo6.png");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        /* background-color: aqua; */
+      }
+
+      .profile-container {
+        display: flex;
+        flex-direction: column;
+        margin: auto;
+        gap: 1.5rem;
+      }
+
+      .profile-container .data-boxes {
+        display: flex;
+        gap: 1rem;
+      }
+
+      .profile-container .data-boxes li {
+        background-color: var(--box-bg);
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: .8rem;
+        font-size: 18px;
+        border-radius: var(--border-radius);
+      }
+
+      .data-boxes li span {
+        color: #BDBDBD;
+        font-size: 14px;
+      }
+
+      .data-boxes li h6 {
+        color: #4E5150;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      .profile-container .user-profile-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 1rem
+      }
+
+      .profile-container .user-profile-container > img {
+        width: 70px;
+        height: 70px;
+        object-fit: contain;
+        border-radius: var(--border-radius);
+      }
+
+      .user-profile-container span {
+        font-weight: 600;
+        font-size: 14px;
+        line-height: 17px;
+        color: #A9A9A9;
+      }
+
+      .user-profile-container h3 {
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 29px;
+
+        color: #4E5150;
+      }
+
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <div class="profile-container">
+          <div class="user-profile-container">
+              <img src="./profilePhoto.png" alt="" class="profile-photo">
+              <h3>Rodney Cotton</h3>
+              <span>Helsinki, Finland</span>
+          </div>
+          <ul class="data-boxes">
+              <li class="li">
+                <h6 class="number">100</h6>
+                <span>Post</span>
+              </li>
+              <li class="li">
+                <h6 class="number">2,242</h6>
+                <span>Followers</span>
+              </li>
+              <li class="li">
+                <h6 class="number">1,412</h6>
+                <span>Following</span>
+              </li>
+            </ul>
+        </div>
+      </header>
+      <main>
+        <div class="item item-1"></div>
+        <div class="item item-2"></div>
+        <div class="item item-3"></div>
+        <div class="item item-4"></div>
+        <div class="item item-5"></div>
+        <div class="item item-6"></div>
+      </main>
+      <footer>
+        <h5>Created by <a href="https://github.com/JorgeDuranAlcala">Jorge Duran</a> </h5>
+      </footer>
+    </div>
+  </body>
+</html>
